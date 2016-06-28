@@ -28,9 +28,6 @@ def get_qiubai(url):
         print(auther[num].get_text().strip('\n') + '\n')
         print(title[num].get_text().strip('\n') + '\n\n')
 
-def get_curl(test_url):
-    req = Request(test_url)
-    opener = build_opener(HTTPCookieProcessor(session.cookies))
-    response = opener.open(req)
-    return response.read().decode()
-get_qiubai(url)
+
+if __name__ == '__main__':
+    get_qiubai(url)
